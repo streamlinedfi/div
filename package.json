@@ -1,0 +1,22 @@
+{
+  "name": "@streamlinedfi/div",
+  "version": "0.1.0",
+  "description": "Streamlined Div is a styled-components extension of the html div for building products with speed",
+  "author": "Streamlined Finance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streamlinedfi/div.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/streamlinedfi/div/issues"
+  },
+  "homepage": "https://github.com/streamlinedfi/div#readme",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "styled-components": "^6.1.19"
+  }
+}
