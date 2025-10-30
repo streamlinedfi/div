@@ -1,6 +1,6 @@
 {
   "name": "@streamlinedfi/div",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Streamlined Div is a styled-components extension of the html div for building products with speed",
   "author": "Streamlined Finance",
   "repository": {
@@ -21,6 +21,12 @@
       "require": "./dist/index.cjs"
     }
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsup",
