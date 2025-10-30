@@ -1,4 +1,3 @@
-import isFunction from 'lodash/isFunction';
 import styled from 'styled-components';
 import { colorMixin, sizeFormatter } from './utils';
 
@@ -36,7 +35,7 @@ const textRules = {
     -webkit-background-clip: text;
     background-clip: text;
     background-image: linear-gradient(${
-      isFunction(props.$linearGradient)
+      typeof props.$linearGradient === 'function'
         ? props.$linearGradient(props.theme)
         : props.$linearGradient
     });

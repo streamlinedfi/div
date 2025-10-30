@@ -12,11 +12,28 @@
     "url": "https://github.com/streamlinedfi/div/issues"
   },
   "homepage": "https://github.com/streamlinedfi/div#readme",
-  "main": "src/index.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "analyze": "npx esbuild-visualizer --metadata ./dist/metafile-esm.json"
   },
   "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
   }
 }
