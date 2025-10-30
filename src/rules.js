@@ -220,14 +220,26 @@ export const divRules = {
   },
   'paddingX|px': {
     css: (props, media) => `
-      padding-left: ${spacing(getPropValue(props, media, 'paddingX', 'px'))};
-      padding-right: ${spacing(getPropValue(props, media, 'paddingX', 'px'))};
+      padding-left: ${spacing(
+        getPropValue(props, media, 'paddingX', 'px'),
+        props.theme,
+      )};
+      padding-right: ${spacing(
+        getPropValue(props, media, 'paddingX', 'px'),
+        props.theme,
+      )};
     `,
   },
   'paddingY|py': {
     css: (props, media) => `
-      padding-top: ${spacing(getPropValue(props, media, 'paddingY', 'py'))};
-      padding-bottom: ${spacing(getPropValue(props, media, 'paddingY', 'py'))};
+      padding-top: ${spacing(
+        getPropValue(props, media, 'paddingY', 'py'),
+        props.theme,
+      )};
+      padding-bottom: ${spacing(
+        getPropValue(props, media, 'paddingY', 'py'),
+        props.theme,
+      )};
     `,
   },
   'margin|m': {
@@ -252,14 +264,26 @@ export const divRules = {
   },
   'marginX|mx': {
     css: (props, media) => `
-      margin-left: ${spacing(getPropValue(props, media, 'marginX', 'mx'))};
-      margin-right: ${spacing(getPropValue(props, media, 'marginX', 'mx'))};
+      margin-left: ${spacing(
+        getPropValue(props, media, 'marginX', 'mx'),
+        props.theme,
+      )};
+      margin-right: ${spacing(
+        getPropValue(props, media, 'marginX', 'mx'),
+        props.theme,
+      )};
     `,
   },
   'marginY|my': {
     css: (props, media) => `
-      margin-top: ${spacing(getPropValue(props, media, 'marginY', 'my'))};
-      margin-bottom: ${spacing(getPropValue(props, media, 'marginY', 'my'))};
+      margin-top: ${spacing(
+        getPropValue(props, media, 'marginY', 'my'),
+        props.theme,
+      )};
+      margin-bottom: ${spacing(
+        getPropValue(props, media, 'marginY', 'my'),
+        props.theme,
+      )};
     `,
   },
 
