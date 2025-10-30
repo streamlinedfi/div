@@ -81,3 +81,27 @@ export function getMediaPropRegex(theme) {
 
   return mediaPropRegex;
 }
+
+export function colorMixin(color, theme) {
+  if (color) {
+    if ([100, 200, 300, 400, 500, 600, 700, 800, 900].includes(color)) {
+      return `color: ${theme[`fill${color}`]};`;
+    }
+
+    if (typeof color === 'string') {
+      if (theme[color]) {
+        return `color: ${theme[color]};`;
+      }
+      return `color: ${color};`;
+    }
+  }
+
+  return '';
+}
+
+export const sizeFormatter = value => {
+  if (typeof value === 'number') {
+    return `${value}px`;
+  }
+  return value;
+};
