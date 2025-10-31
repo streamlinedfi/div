@@ -18,10 +18,10 @@ const { keys } = Object;
  * />
  */
 
-export function renderCss(props, rules) {
+export function renderCss(props, rules, id = 'div') {
   let css = '';
 
-  const ruleIndex = getRuleIndex(rules);
+  const ruleIndex = getRuleIndex(rules, id);
   const mediaPropRegex = getMediaPropRegex(props.theme);
 
   let i = -1;

@@ -346,6 +346,7 @@ export const divRules = {
             media,
             extensions?.length ? [jsKey, ...extensions].join('$') : jsKey,
           );
+          console.log('TCL: propValue', propValue);
 
           // withTheme
           const value =

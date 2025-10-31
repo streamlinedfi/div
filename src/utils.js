@@ -56,9 +56,9 @@ export function isPropPresent(props, media, ...propKeys) {
   return !!getPropValue(props, media, ...propKeys);
 }
 
-let ruleIndex = null;
-export function getRuleIndex(rules) {
-  if (ruleIndex) return ruleIndex;
+const ruleIndexes = {};
+export function getRuleIndex(rules, id) {
+  if (ruleIndexes[id]) return ruleIndexes[id];
 
   const index = {};
   entries(rules).forEach(([ruleProp, config]) => {
@@ -66,7 +66,7 @@ export function getRuleIndex(rules) {
       index[prop] = config;
     });
   });
-  ruleIndex = index;
+  ruleIndexes[id] = index;
 
   return index;
 }
@@ -83,6 +83,7 @@ export function getMediaPropRegex(theme) {
 }
 
 export function colorMixin(color, theme) {
+  console.log('TCL: colorMixin -> color', color);
   if (color) {
     if ([100, 200, 300, 400, 500, 600, 700, 800, 900].includes(color)) {
       return `color: ${theme[`fill${color}`]};`;

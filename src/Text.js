@@ -14,6 +14,7 @@ const textRules = {
       const color = extensions.includes('hover')
         ? props.$color$hover
         : props.$color;
+      console.log('TCL: color', color);
 
       return colorMixin(color, props.theme);
     },
@@ -51,7 +52,11 @@ const textRules = {
 
 const Text = styled.p`
   ${props => divMixin(props)}
-  ${props => renderCss(props, textRules)}
+  ${props => {
+    console.log('TCL: props', props);
+    console.log('TCL: render', renderCss(props, textRules, 'text'));
+    return renderCss(props, textRules, 'text');
+  }}
 `;
 
 export default Text;

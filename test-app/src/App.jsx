@@ -1,4 +1,4 @@
-import Div from '@streamlinedfi/div';
+import { Div, Text } from '@streamlinedfi/div';
 import styled from 'styled-components';
 import { uiSystem } from './uiSystem.js';
 
@@ -26,6 +26,15 @@ const Container = styled.div`
 function App() {
   return (
     <>
+      <Text $size={13} $color={400} $mb={0.5}>
+        Hello
+      </Text>
+      <Text $size={16} $color={500} $mb={0.5}>
+        Bonjour
+      </Text>
+      <Text $size={19} $color={600} $mb={1}>
+        Salut
+      </Text>
       <Div
         $background={theme => theme.red}
         $mobile$w={100}
@@ -33,7 +42,12 @@ function App() {
         $desktop$w={300}
         $mb={1}
         $h={100}
-      />
+        $px={1}
+        $py={1}
+        $mx={1}
+      >
+        <Div $w={100} $h={100} $background={theme => theme.blue} />
+      </Div>
       <Div
         $background={theme => theme.blue}
         $mobile$w={100}
