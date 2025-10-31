@@ -83,7 +83,6 @@ export function getMediaPropRegex(theme) {
 }
 
 export function colorMixin(color, theme) {
-  console.log('TCL: colorMixin -> color', color);
   if (color) {
     if ([100, 200, 300, 400, 500, 600, 700, 800, 900].includes(color)) {
       return `color: ${theme[`fill${color}`]};`;
